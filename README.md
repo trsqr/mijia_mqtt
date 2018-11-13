@@ -27,6 +27,23 @@ Optional arguments:
 -h  | --help
 ```
 
+## Discovering the Sensors
+
+Find your Mijia sensors using hcitool lescan:
+
+```
+root@green:~# hcitool lescan
+LE Scan ...
+4C:65:A8:D9:3E:76 (unknown)
+4C:65:A8:D9:3E:76 MJ_HT_V1
+4C:65:A8:D7:49:1C (unknown)
+4C:65:A8:D7:49:1C MJ_HT_V1
+4C:65:A8:D9:48:2F (unknown)
+4C:65:A8:D9:48:2F MJ_HT_V1
+```
+
+There is no need to do any pairing.
+
 ## Example
 
 This queries Mijia sensor that has address 4c:65:a8:d9:3e:76 and reports the results to the MQTT broker at 192.168.99.13 using subtopic lab and printing the debug output:
