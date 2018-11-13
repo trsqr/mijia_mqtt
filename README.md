@@ -1,9 +1,12 @@
 # mijia_mqtt
 Simple script to report temperature, humidity and battery level of Xiaomi Mijia Bluetooth Temperature and Humidity Sensor to MQTT. Requires gatttool, mosquitto_pub, bc and xxd tools to be installed.
 
-I'm running this from cron on an Intel Compute Stick.
+On Ubuntu 18.04 these packages can be installed with:
+```apt install xxd bc mosquitto-clients bluez```
 
 Temperatures returned are Celsius degrees.
+
+You could add it in cron to do this repeatedly.
 
 ## Usage
 
