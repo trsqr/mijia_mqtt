@@ -144,7 +144,7 @@ done
 battery=$(echo $battery | cut -f 2 -d":" | tr '[:lower:]' '[:upper:]')
 
 temp=$(echo $data | tail -1 | grep -oP 'value: \K.*' | xxd -r -p | cut -f 1 -d" " | cut -f 2 -d"=")
-humid=$(echo $data | tail -1 | grep -oP 'value: \K.*' | xxd -r -p | cut -f 2 -d" " | cut -f 2 -d"=")
+humid=$(echo $data | tail -1 | grep -oP 'value: \K.*' | xxd -r -p | cut -f 2 -d" " | cut -f 2 -d"=" | tr -d '\0')
 batt=$(echo "ibase=16; $battery" | bc)
 
 debug_print "Temperature: $temp, Humidity: $humid, Battery: $batt"
